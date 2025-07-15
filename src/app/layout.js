@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "AI-Driven Conversations, Everywhere | YourCompany",
+  title: "Kragnetic-AI",
   description: "One event-driven platform to dial, qualify, and delight customers on every channel—while filling every form for you.",
   keywords: ["AI", "CRM automation", "customer engagement", "AI dialer", "event-driven platform"],
   openGraph: {

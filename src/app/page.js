@@ -119,7 +119,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>AI-Driven Conversations, Everywhere | Your Platform</title>
+        <title>Kragnetic-AI</title>
         <meta name="description" content="One event-driven platform to dial, qualify, and delight customers on every channel—while filling every form for you." />
         <meta property="og:title" content="AI-Driven Conversations, Everywhere" />
         <meta property="og:description" content="One event-driven platform to dial, qualify, and delight customers on every channel—while filling every form for you." />
@@ -137,7 +137,7 @@ export default function Home() {
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center space-x-8">
                 <div className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
-                  YourCompany
+                  Kragnetic-AI
                 </div>
                 <div className="hidden md:flex space-x-6">
                   <a href="#platform" className="text-gray-700 hover:text-indigo-600 transition-colors">Platform</a>
@@ -653,7 +653,7 @@ export default function Home() {
             <div className="grid md:grid-cols-4 gap-8">
               <div>
                 <div className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent mb-4">
-                  YourCompany
+                  Kragnetic-AI
                 </div>
                 <p className="text-gray-400">
                   AI-driven conversations that convert prospects into customers.
@@ -693,9 +693,9 @@ export default function Home() {
             
             <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400">
-                © 2024 YourCompany Inc. • Built with ♥ on Cloudflare & AWS
+                © 2024 Kragnetic-AI Inc. • Built with ♥ on Cloudflare & AWS
               </p>
-              
+            
               <div className="flex items-center space-x-6 mt-4 md:mt-0">
                 <div className="flex items-center space-x-4 opacity-60">
                   <div className="w-6 h-6 bg-gray-700 rounded flex items-center justify-center">
