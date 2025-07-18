@@ -37,7 +37,11 @@
          type:String,
         required:true
 
-    }
+    },
+     termsAndConditions: {
+        type: Boolean,
+        required: true
+}
     
     });
 
