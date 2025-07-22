@@ -137,21 +137,27 @@ export default function Home() {
               <h1 className={`text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 transition-all duration-1000 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
                 Omnichannel AI{' '}
                 <span className="bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
-                  Customer Platform
+                  Conversational Platform
                 </span>
               </h1>
               
               <p className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-                Unified AI platform that handles voice, email, SMS, and chat conversations with real-time customer intelligence and script analytics. Drive ROI across every channel with generative AI insights.
+                Unified AI platform that handles Voice, Email, SMS, and Chat conversations with real-time intelligence and script analytics drive ROI across every channel. Drive ROI across every channel with Generative AI insights.
               </p>
               
               <div className={`flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 transition-all duration-1000 delay-400 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-                <button onClick={scrollToEarlyAccess} className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+                {/* <button onClick={scrollToEarlyAccess} className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200">
                   Start Free Trial
-                </button>
-                <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-indigo-600 hover:text-indigo-600 transition-all duration-200">
-                  Book a Demo
-                </button>
+                </button> */}
+                <div className="flex flex-col items-center">
+                 
+                     <Link href="/book-demo" className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-indigo-600 hover:text-indigo-600 transition-all duration-200">
+                    Book a Demo
+                  </Link>
+                
+               
+                  <span className="text-sm text-gray-500 mt-2">Coming Soon</span>
+                </div>
               </div>
             </div>
             

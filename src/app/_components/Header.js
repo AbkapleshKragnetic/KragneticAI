@@ -15,14 +15,15 @@ const Header = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         <div className="flex items-center space-x-8">
-                            <div className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
+                            <Link  href="/" className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
                                 Kragnetic-AI
-                            </div>
+                            </Link>
                             <div className="hidden md:flex space-x-6">
-                                <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors">Platform</Link>
+                                {/* <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors">Platform</Link> */}
                                 <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors">Solutions</Link>
                                 <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors">Resources</Link>
                                 <Link href="/pricing" className="text-gray-700 hover:text-indigo-600 transition-colors">Pricing</Link>
+                                 <Link href="/chat-analysis" className="text-gray-700 hover:text-indigo-600 transition-colors">Chat Analysis </Link>
                             </div>
                         </div>
                         <div className="flex items-center space-x-4">
