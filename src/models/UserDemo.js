@@ -32,8 +32,8 @@ const bookDemoSchema = new mongoose.Schema({
 });
 
 // Add index for email for better query performance
-bookDemoSchema.index({ email: 1 });
-bookDemoSchema.index({ createdAt: -1 });
+// bookDemoSchema.index({ email: 1 });
+// bookDemoSchema.index({ createdAt: -1 });
 
 // Prevent model overwrite during hot reload
 export default mongoose.models.UserDemo|| 

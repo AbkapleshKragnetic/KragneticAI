@@ -180,8 +180,8 @@
 // }
 
 
-import { connectDB } from '@/lib/DbConnection';
-import WaitlistEntry from '@/models/WaitlistEntry';
+import { connectDB } from '../../../lib/DbConnection';
+import WaitlistEntry from '../../../models/WaitlistEntry';
 import { NextResponse } from 'next/server';
 
 export async function POST(request) {
