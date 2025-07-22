@@ -1,14 +1,14 @@
 
-    import mongoose from "mongoose";
-    const userFormSchema = new mongoose.Schema({
+import mongoose from "mongoose";
+const userFormSchema = new mongoose.Schema({
 
-    fullname:{
-    type:String,
-    required:true
+    fullname: {
+        type: String,
+        required: true
     },
-    company:{
-    type:String,
-    required:true
+    company: {
+        type: String,
+        required: true
     },
     email: {
         type: String,
@@ -16,35 +16,35 @@
         unique: true,
         lowercase: true,
     },
-    jobTitle:{
-        type:String,
-        required:true,
+    jobTitle: {
+        type: String,
+        required: true,
     },
-    phoneNumber:{
-        type:String,
-        required:true
+    phoneNumber: {
+        type: String,
+        required: true
     },
-     country:{
-        type:String,
-        required:true
+    country: {
+        type: String,
+        required: true
     }
     ,
-    userMessage:{
-        type:String,
-        required:true
+    userMessage: {
+        type: String,
+        required: true
     },
-    callsRange:{
-         type:String,
-        required:true
+    callsRange: {
+        type: String,
+        required: true
 
     },
-     termsAndConditions: {
+    termsAndConditions: {
         type: Boolean,
         required: true
-}
-    
-    });
+    }
 
-    // Prevent model overwrite during hot reload
-    export default mongoose.models.userFormData ||
+});
+
+// Prevent model overwrite during hot reload
+export default mongoose.models.userFormData ||
     mongoose.model('userFormData', userFormSchema);
