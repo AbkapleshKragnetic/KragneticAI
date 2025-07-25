@@ -38,6 +38,11 @@ const userFormSchema = new mongoose.Schema({
         required: true
 
     },
+    status: {
+    type: String,
+    enum: ['pending', 'contacted', 'converted', 'rejected'],
+    default: 'pending'
+    },
     termsAndConditions: {
         type: Boolean,
         required: true

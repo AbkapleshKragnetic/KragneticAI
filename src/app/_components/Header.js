@@ -21,7 +21,7 @@ const Header = () => {
                             <div className="hidden md:flex space-x-6">
                                 {/* <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors">Platform</Link> */}
                                 <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors">Solutions</Link>
-                                <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors">Resources</Link>
+                                <Link href="/admin" className="text-gray-700 hover:text-indigo-600 transition-colors">Admin</Link>
                                 <Link href="/pricing" className="text-gray-700 hover:text-indigo-600 transition-colors">Pricing</Link>
                                  <Link href="/chat-analysis" className="text-gray-700 hover:text-indigo-600 transition-colors">Chat Analysis </Link>
                             </div>
