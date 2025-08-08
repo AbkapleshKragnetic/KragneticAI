@@ -1,0 +1,11 @@
+image: node:20
+
+tasks:
+  - init: npm install
+    command: npm run dev
+
+vscode:
+  extensions:
+    - dsznajder.es7-react-js-snippets
+    - esbenp.prettier-vscode
+    - eamodio.gitlens
