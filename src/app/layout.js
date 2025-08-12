@@ -1,19 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Header from "./_components/Header";
-
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+import Footer from "./_components/footer";
+import Getstarted from "./_components/Getstarted";
+import { Space_Grotesk } from 'next/font/google';
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'], // Choose the weights you need
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export const metadata = {
   title: "Kragnetic-AI",
@@ -40,15 +38,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  
+
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body className={`${spaceGrotesk.className}`}
+       
       >
-        <Header/>
+
+        <Header />
         {children}
-         <ToastContainer position="top-center" autoClose={3000} />
+        <Getstarted />
+        <Footer />
+        <ToastContainer position="top-center" autoClose={3000} />
       </body>
     </html>
   );

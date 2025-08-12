@@ -1,8 +1,10 @@
 'use client'
 import { useState } from 'react';
-import Link from 'next/link';
+import { UseInViewAnimation } from '@/customHooks/UseInViewAnimation';
+import { MdSubdirectoryArrowRight } from "react-icons/md";
 
 export default function BookDemo() {
+     const isVisible = UseInViewAnimation();
     const [formData, setFormData] = useState({
         name: '',
         email: ''
@@ -45,6 +47,7 @@ export default function BookDemo() {
     };
 
     const handleSubmit = async (e) => {
+
         e.preventDefault();
         
         // Validate all fields before submission
@@ -111,33 +114,19 @@ export default function BookDemo() {
     };
 
     return (
-        <div className="min-h-screen bg-white">
-            {/* Navigation */}
-            <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-16">
-                        <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
-                            Kragnetic-AI
-                        </Link>
-                        <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors">
-                            Back to Home
-                        </Link>
-                    </div>
-                </div>
-            </nav>
-
+        <div  id ="demo" className={`min-h-screen bg-white transition-all duration-1000 ${isVisible.demo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}  >
             {/* Hero Section */}
             <section className="pt-24 pb-12 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50"></div>
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                     <div className="text-center">
-                        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                        <h1 className="font-space font-medium text-[57px] text-[#00020e] mb-6 leading-[60px]">
                             Book Your{' '}
-                            <span className="bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
+                            <span className="text-[#ff4844] block">
                                 Personalized Demo
                             </span>
                         </h1>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                        <p className="text-xl text-[#1b2534] mb-8 font-light">
                             Experience the power of our Omnichannel AI platform. See how we can transform your customer communications across all channels.
                         </p>
                     </div>
@@ -147,47 +136,41 @@ export default function BookDemo() {
             {/* Main Content */}
             <section className="py-12">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-12">
+                    <div className="grid lg:grid-cols-2 gap-12 ">
                         {/* Left Column - Benefits */}
-                        <div>
+                        <div >
                             <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Book a Demo?</h2>
 
                             <div className="space-y-6">
-                                <div className="flex items-start space-x-4">
-                                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-lg flex items-center justify-center">
-                                        <span className="text-white text-xl">🚀</span>
-                                    </div>
-                                    <div>
+                                <div className="flex flex-start space-x-4 ">
+                                    
+                                         <MdSubdirectoryArrowRight size={50} color='#ff4844'/>
+
+                                    <div className='pt-[10px]'>
                                         <h3 className="text-lg font-semibold text-gray-900 mb-2">See the Platform in Action</h3>
                                         <p className="text-gray-600">Get a live walkthrough of our unified AI platform managing voice, email, SMS, and chat interactions seamlessly.</p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start space-x-4">
-                                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                                        <span className="text-white text-xl">📊</span>
-                                    </div>
-                                    <div>
+                                   <MdSubdirectoryArrowRight size={50} color='#ff4844'/>
+                                    <div className='pt-[10px]'>
                                         <h3 className="text-lg font-semibold text-gray-900 mb-2">ROI Calculator</h3>
                                         <p className="text-gray-600">Discover your potential ROI increase with our proven analytics showing 247% average improvement.</p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start space-x-4">
-                                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                                        <span className="text-white text-xl">🤖</span>
-                                    </div>
-                                    <div>
+                                    <MdSubdirectoryArrowRight size={50} color='#ff4844'/>
+                                    <div className='pt-[10px]'>
                                         <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Capabilities Preview</h3>
                                         <p className="text-gray-600">Experience our generative AI analyzing conversations and providing real-time optimization suggestions.</p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start space-x-4">
-                                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                                        <span className="text-white text-xl">🎯</span>
-                                    </div>
-                                    <div>
+                                      <MdSubdirectoryArrowRight size={50} color='#ff4844'/>
+                                    <div  className='pt-[10px]'>
                                         <h3 className="text-lg font-semibold text-gray-900 mb-2">Custom Solution Design</h3>
                                         <p className="text-gray-600">Get a tailored implementation plan specific to your industry and business needs.</p>
                                     </div>
@@ -197,15 +180,15 @@ export default function BookDemo() {
                             {/* Stats */}
                             <div className="mt-12 grid grid-cols-3 gap-4 text-center">
                                 <div className="bg-gray-50 rounded-lg p-4">
-                                    <div className="text-2xl font-bold text-indigo-600">500+</div>
+                                    <div className="text-2xl font-bold text-[#ff4844]">500+</div>
                                     <div className="text-sm text-gray-600">Happy Clients</div>
                                 </div>
                                 <div className="bg-gray-50 rounded-lg p-4">
-                                    <div className="text-2xl font-bold text-indigo-600">247%</div>
+                                    <div className="text-2xl font-bold text-[#ff4844]">247%</div>
                                     <div className="text-sm text-gray-600">Avg ROI</div>
                                 </div>
                                 <div className="bg-gray-50 rounded-lg p-4">
-                                    <div className="text-2xl font-bold text-indigo-600">24/7</div>
+                                    <div className="text-2xl font-bold text-[#ff4844]">24/7</div>
                                     <div className="text-sm text-gray-600">Support</div>
                                 </div>
                             </div>
@@ -213,13 +196,13 @@ export default function BookDemo() {
 
                         {/* Right Column - Form */}
                         <div>
-                            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-6">Schedule Your Demo</h2>
-                                <p className="text-gray-600 mb-8">Fill out the form below and we'll contact you within 24 hours to schedule your personalized demo.</p>
+                            <div className="bg-[#00020e] rounded-2xl shadow-xl p-8 border border-gray-200">
+                                <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Demo</h2>
+                                <p className="text-white mb-8">Fill out the form below and we'll contact you within 24 hours to schedule your personalized demo.</p>
 
-                                <form onSubmit={handleSubmit} className="space-y-6">
+                                <form onSubmit={handleSubmit} className="space-y-6 text-white">
                                     <div>
-                                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                                        <label htmlFor="name" className="block text-sm font-medium  mb-2">
                                             Full Name *
                                         </label>
                                         <input
@@ -231,19 +214,19 @@ export default function BookDemo() {
                                             required
                                             disabled={isSubmitting}
                                             className={`w-full px-4 py-3 rounded-lg border ${
-                                                formErrors.name ? 'border-red-500' : 'border-gray-300'
+                                                formErrors.name ? 'border-[#ff4844]' : 'border-gray-300'
                                             } focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-colors disabled:opacity-50`}
                                             placeholder="John Doe"
                                         />
                                         {formErrors.name && (
-                                            <p className="text-red-500 text-sm mt-1">
+                                            <p className="text-[#ff4844] text-sm mt-1">
                                                 {formErrors.name}
                                             </p>
                                         )}
                                     </div>
 
                                     <div>
-                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                                        <label htmlFor="email" className="block text-sm font-medium  mb-2">
                                             Work Email *
                                         </label>
                                         <input
@@ -255,12 +238,12 @@ export default function BookDemo() {
                                             required
                                             disabled={isSubmitting}
                                             className={`w-full px-4 py-3 rounded-lg border ${
-                                                formErrors.email ? 'border-red-500' : 'border-gray-300'
+                                                formErrors.email ? 'border-[#ff4844]' : 'border-gray-300'
                                             } focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-colors disabled:opacity-50`}
                                             placeholder="john.doe@company.com"
                                         />
                                         {formErrors.email && (
-                                            <p className="text-red-500 text-sm mt-1">
+                                            <p className="text-[#ff4844] text-sm mt-1">
                                                 {formErrors.email}
                                             </p>
                                         )}
@@ -269,7 +252,7 @@ export default function BookDemo() {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="w-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:transform-none"
+                                        className="w-full bg-[#ff4844] text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:transform-none"
                                     >
                                         {isSubmitting ? 'Submitting...' : 'Book Demo'}
                                     </button>
