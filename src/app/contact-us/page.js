@@ -105,12 +105,12 @@ export default function Contactus() {
         id="contact"
         className={`py-12 bg-gradient-to-br from-blue-50 via-white to-indigo-50 transition-all duration-1000 ${isVisible.contact ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="grid lg:grid-cols-2 gap-12">
 
             {/* Left Column - Info */}
             <div className='flex flex-col gap-4 '>
-              <h1 className='font-space font-medium text-[57px] text-[#00020e] mb-6 leading-[60px]'>Get in touch</h1>
+              <h1 className=' font-medium text-[40px]  text-[#00020e] max-sm:text-[28px] '>Get in touch</h1>
               <h3 className='text-xl text-[#1b2534] mb-8 max-w-[700px] font-light '>
                 Looking to get in touch with someone at Kragnetic-AI? Let us know what you’re looking for and we’ll make sure we get you to the right place.
               </h3>
@@ -138,16 +138,16 @@ export default function Contactus() {
 
             {/* Right Column - Form */}
             <div>
-              <div className='bg-white rounded-2xl shadow-xl p-8 border border-gray-200 mx-auto w-[450px] '>
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">Contact us</h2>
-                <p className="text-gray-600 mb-8">
+              <div className='bg-[#00020e]  rounded-2xl shadow-xl p-8 border border-gray-200 mx-auto w-[100%] '>
+                <h2 className="text-2xl font-bold text-white mb-2">Contact us</h2>
+                <p className="text-white mb-8">
                   Fill out the form below and we'll contact you within 24 hours
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6 text-white">
                   {/* Name */}
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                    <label htmlFor="name" className="block text-sm font-medium  mb-2">Full Name *</label>
                     <input
                       type="text"
                       id="name"
@@ -163,7 +163,7 @@ export default function Contactus() {
 
                   {/* Email */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Work Email *</label>
+                    <label htmlFor="email" className="block text-sm font-medium  mb-2">Work Email *</label>
                     <input
                       type="email"
                       id="email"
@@ -179,7 +179,7 @@ export default function Contactus() {
 
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Your Message *</label>
+                    <label htmlFor="message" className="block text-sm font-medium  mb-2">Your Message *</label>
                     <textarea
                       id="message"
                       name="message"
@@ -202,7 +202,7 @@ export default function Contactus() {
                     {isSubmitting ? 'Submitting...' : 'Submit'}
                   </button>
 
-                  <p className="text-sm text-gray-500 text-center">
+                  <p className="text-sm text-white text-center">
                     By submitting this form, you agree to our terms and privacy policy.
                   </p>
                 </form>

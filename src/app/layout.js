@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
 
         <Header />
         {children}
-        <Getstarted />
+        {/* <Getstarted /> */}
         <Footer />
         <ToastContainer position="top-center" autoClose={3000} />
       </body>

@@ -12,7 +12,7 @@ export default function Aboutus() {
       <section id="about" className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className=' font-medium text-[57px] text-[#00020e] mb-6 leading-[60px] '>About Us</h2>
+            <h2 className=' font-medium text-[57px] text-[#00020e] mb-6 leading-[60px] max-sm:text-[28px] '>About Us</h2>
             <p className='text-xl text-[#1b2534] mb-8 font-light'>
               Learn more about our mission, vision, and the team behind Kragnetic-AI.
             </p>

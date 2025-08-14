@@ -4,7 +4,7 @@ import { UseInViewAnimation } from '@/customHooks/UseInViewAnimation';
 import { MdSubdirectoryArrowRight } from "react-icons/md";
 
 export default function BookDemo() {
-     const isVisible = UseInViewAnimation();
+    const isVisible = UseInViewAnimation();
     const [formData, setFormData] = useState({
         name: '',
         email: ''
@@ -49,7 +49,7 @@ export default function BookDemo() {
     const handleSubmit = async (e) => {
 
         e.preventDefault();
-        
+
         // Validate all fields before submission
         const errors = {};
         for (const [name, value] of Object.entries(formData)) {
@@ -58,14 +58,14 @@ export default function BookDemo() {
                 errors[name] = error;
             }
         }
-        
+
         setFormErrors(errors);
-        
+
         // Check if there are any errors
         if (Object.keys(errors).length > 0) {
             setSubmitMessage("Please fix the errors before submitting.");
             setSubmitStatus('error');
-            
+
             // Clear error message after 5 seconds
             setTimeout(() => {
                 setSubmitMessage('');
@@ -73,7 +73,7 @@ export default function BookDemo() {
             }, 5000);
             return;
         }
-        
+
         setIsSubmitting(true);
         setSubmitMessage('');
         setSubmitStatus('');
@@ -114,90 +114,72 @@ export default function BookDemo() {
     };
 
     return (
-        <div  id ="demo" className={`min-h-screen bg-white transition-all duration-1000 ${isVisible.demo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}  >
-            {/* Hero Section */}
-            <section className="pt-24 pb-12 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50"></div>
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                    <div className="text-center">
-                        <h1 className="font-space font-medium text-[57px] text-[#00020e] mb-6 leading-[60px]">
-                            Book Your{' '}
-                            <span className="text-[#ff4844] block">
-                                Personalized Demo
-                            </span>
-                        </h1>
-                        <p className="text-xl text-[#1b2534] mb-8 font-light">
-                            Experience the power of our Omnichannel AI platform. See how we can transform your customer communications across all channels.
-                        </p>
-                    </div>
-                </div>
-            </section>
+        <div id="demo" className={`min-h-screen bg-white transition-all duration-1000 ${isVisible.demo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'} `}  >
 
             {/* Main Content */}
-            <section className="py-12">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-12 ">
+            <section className="py-30">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid lg:grid-cols-2 gap-20">
                         {/* Left Column - Benefits */}
                         <div >
-                            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Book a Demo?</h2>
+                            <p className="text-[16px] font-bold text-gray-900 mb-8 "> Get Your Revenue Assessment
+                            </p>
+                            <h2 className='  mb-3 leading-tight text-[38px] max-sm:text-[28px]   '>
+                                See how Kragentic transforms missed opportunities into captured revenue
+                            </h2>
+                            <p className='text-[16px] mb-3'>
+                                Schedule a personalized demonstration with our team to discover exactly how much additional revenue your business is leaving on the table - and how Kragentic captures it automatically.
+
+                            </p>
 
                             <div className="space-y-6">
                                 <div className="flex flex-start space-x-4 ">
-                                    
-                                         <MdSubdirectoryArrowRight size={50} color='#ff4844'/>
+                                    <div>
+                                        <MdSubdirectoryArrowRight size={30} color='#ff4844' />
+                                    </div>
+                                    <div >
+                                        <h3 className="text-[24px] font-semibold text-gray-900 mb-2 ">Instant Revenue Recognition</h3>
+                                        <p className="text-gray-600">Feel the excitement of seeing your exact revenue potential within the first 15 minutes of our demo. <br />
+                                            Calculate precisely how many leads you're losing to delayed responses, missed calls, and manual processes - then watch us show you the automated system that captures every single opportunity.
+                                        </p>
+                                    </div>
+                                </div>
 
-                                    <div className='pt-[10px]'>
-                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">See the Platform in Action</h3>
-                                        <p className="text-gray-600">Get a live walkthrough of our unified AI platform managing voice, email, SMS, and chat interactions seamlessly.</p>
+                                <div className="flex flex-start space-x-4">
+                                    <div>
+                                        <MdSubdirectoryArrowRight size={30} color='#ff4844' />
+                                    </div>
+
+                                    <div>
+                                        <h3 className="text-[24px] font-semibold text-gray-900 mb-2">Seamless Implementation Power</h3>
+                                        <p className="text-gray-600">Experience the relief of knowing your entire revenue system can be optimized without disrupting current operations. <br />
+                                            Witness how Kragentic integrates with your existing CRM, scheduling tools, and business processes to enhance what's working while fixing what isn't - implementation in weeks, not months.
+
+                                        </p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start space-x-4">
-                                   <MdSubdirectoryArrowRight size={50} color='#ff4844'/>
-                                    <div className='pt-[10px]'>
-                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">ROI Calculator</h3>
-                                        <p className="text-gray-600">Discover your potential ROI increase with our proven analytics showing 247% average improvement.</p>
+                                    <div>
+                                        <MdSubdirectoryArrowRight size={30} color='#ff4844' />
                                     </div>
-                                </div>
 
-                                <div className="flex items-start space-x-4">
-                                    <MdSubdirectoryArrowRight size={50} color='#ff4844'/>
-                                    <div className='pt-[10px]'>
-                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Capabilities Preview</h3>
-                                        <p className="text-gray-600">Experience our generative AI analyzing conversations and providing real-time optimization suggestions.</p>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-start space-x-4">
-                                      <MdSubdirectoryArrowRight size={50} color='#ff4844'/>
-                                    <div  className='pt-[10px]'>
-                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Custom Solution Design</h3>
-                                        <p className="text-gray-600">Get a tailored implementation plan specific to your industry and business needs.</p>
+                                    <div >
+                                        <h3 className="text-[24px] font-semibold text-gray-900 mb-2">Intelligent Optimization That Learns</h3>
+                                        <p className="text-gray-600">Discover the confidence that comes from AI that gets smarter with every interaction. <br/>
+                                            See real-time analytics showing how our ML and RL systems continuously optimize your scripts, pricing, scheduling, and lead nurturing to maximize conversion rates and customer lifetime value.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Stats */}
-                            <div className="mt-12 grid grid-cols-3 gap-4 text-center">
-                                <div className="bg-gray-50 rounded-lg p-4">
-                                    <div className="text-2xl font-bold text-[#ff4844]">500+</div>
-                                    <div className="text-sm text-gray-600">Happy Clients</div>
-                                </div>
-                                <div className="bg-gray-50 rounded-lg p-4">
-                                    <div className="text-2xl font-bold text-[#ff4844]">247%</div>
-                                    <div className="text-sm text-gray-600">Avg ROI</div>
-                                </div>
-                                <div className="bg-gray-50 rounded-lg p-4">
-                                    <div className="text-2xl font-bold text-[#ff4844]">24/7</div>
-                                    <div className="text-sm text-gray-600">Support</div>
-                                </div>
-                            </div>
+                            
                         </div>
 
                         {/* Right Column - Form */}
-                        <div>
-                            <div className="bg-[#00020e] rounded-2xl shadow-xl p-8 border border-gray-200">
-                                <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Demo</h2>
+                       <div>
+                            <div className="bg-[#00020e] rounded-2xl shadow-xl p-8 border border-gray-200 sticky top-20">
+                                <h2 className="text-2xl font-bold text-white mb-6">Get Your Revenue Assessment</h2>
                                 <p className="text-white mb-8">Fill out the form below and we'll contact you within 24 hours to schedule your personalized demo.</p>
 
                                 <form onSubmit={handleSubmit} className="space-y-6 text-white">
@@ -213,9 +195,8 @@ export default function BookDemo() {
                                             onChange={handleChange}
                                             required
                                             disabled={isSubmitting}
-                                            className={`w-full px-4 py-3 rounded-lg border ${
-                                                formErrors.name ? 'border-[#ff4844]' : 'border-gray-300'
-                                            } focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-colors disabled:opacity-50`}
+                                            className={`w-full px-4 py-3 rounded-lg border ${formErrors.name ? 'border-[#ff4844]' : 'border-gray-300'
+                                                } focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-colors disabled:opacity-50`}
                                             placeholder="John Doe"
                                         />
                                         {formErrors.name && (
@@ -237,9 +218,8 @@ export default function BookDemo() {
                                             onChange={handleChange}
                                             required
                                             disabled={isSubmitting}
-                                            className={`w-full px-4 py-3 rounded-lg border ${
-                                                formErrors.email ? 'border-[#ff4844]' : 'border-gray-300'
-                                            } focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-colors disabled:opacity-50`}
+                                            className={`w-full px-4 py-3 rounded-lg border ${formErrors.email ? 'border-[#ff4844]' : 'border-gray-300'
+                                                } focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-colors disabled:opacity-50`}
                                             placeholder="john.doe@company.com"
                                         />
                                         {formErrors.email && (
@@ -254,7 +234,7 @@ export default function BookDemo() {
                                         disabled={isSubmitting}
                                         className="w-full bg-[#ff4844] text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:transform-none"
                                     >
-                                        {isSubmitting ? 'Submitting...' : 'Book Demo'}
+                                        {isSubmitting ? 'Submitting...' : 'Submit'}
                                     </button>
 
                                     <p className="text-sm text-gray-500 text-center">
@@ -263,11 +243,10 @@ export default function BookDemo() {
                                 </form>
 
                                 {submitMessage && (
-                                    <div className={`mt-6 p-4 rounded-lg ${
-                                        submitStatus === 'success'
-                                            ? 'bg-green-50 text-green-800 border border-green-200'
-                                            : 'bg-red-50 text-red-800 border border-red-200'
-                                    }`}>
+                                    <div className={`mt-6 p-4 rounded-lg ${submitStatus === 'success'
+                                        ? 'bg-green-50 text-green-800 border border-green-200'
+                                        : 'bg-red-50 text-red-800 border border-red-200'
+                                        }`}>
                                         <p className="font-medium">{submitMessage}</p>
                                     </div>
                                 )}
@@ -284,17 +263,7 @@ export default function BookDemo() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-12 bg-gradient-to-br from-indigo-50 to-blue-50">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        Join 500+ Companies Using Kragnetic-AI
-                    </h2>
-                    <p className="text-lg text-gray-600">
-                        Transform your customer communications with our unified AI platform
-                    </p>
-                </div>
-            </section>
+         
         </div>
     );
 }

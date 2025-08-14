@@ -1,4 +1,7 @@
 "use client"
+
+import Link from 'next/link';
+
 const Footer = () => {
   
 
@@ -11,17 +14,7 @@ const Footer = () => {
               </p>
 
               <div className="flex items-center space-x-6 mt-4 md:mt-0">
-                <div className="flex items-center opacity-60 gap-[20px]">
-                  <div className="bg-gray-700 px-2 py-1 rounded flex items-center justify-center">
-                    <span className="text-xs font-bold">SOC2</span>
-                  </div>
-                  <div className="bg-gray-700 px-2 py-1 rounded flex items-center justify-center">
-                    <span className="text-xs font-bold">ISO</span>
-                  </div>
-                  <div className="bg-gray-700 px-2 py-1 rounded flex items-center justify-center">
-                    <span className="text-xs font-bold">GDPR</span>
-                  </div>
-                </div>
+               <Link href="/about-us" className='underline'>About us</Link>
               </div>
             </div>
           </div>
